@@ -1,0 +1,26 @@
+config/production.js
+mochawesome-reports
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.DS_Store
+
+# vim tmp/swp files
+*.swp
+*.un~
+
+pids
+logs
+results
+
+npm-debug.log
+
+node_modules/
+theme/node_modules
+
+book

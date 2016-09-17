@@ -346,7 +346,7 @@ describe('/user', function() {
         done();
     });
 
-    it('GET /删除用户', function*(done) {
+    it('DELETE /删除用户', function*(done) {
         var res = yield agent
             .delete('/user/' + id)
             .send();

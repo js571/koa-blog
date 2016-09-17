@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "blog for koa.",
   "scripts": {
-    "start": "NODE_ENV=production DEBUG=* PORT=10002 node --harmony app",
-    "test": "NODE_ENV=development ./node_modules/mocha/bin/mocha",
-    "dev": "NODE_ENV=development DEBUG=* PORT=10002 supervisor --harmony app"
+    "start": "cross-env NODE_ENV=production DEBUG=* PORT=10002 node --harmony app",
+    "test": "cross-env NODE_ENV=development ./node_modules/mocha/bin/mocha",
+    "dev": "cross-env NODE_ENV=development DEBUG=* PORT=10002 supervisor --harmony app"
   },
   "dependencies": {
     "co-cache": "2.0.1",

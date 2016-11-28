@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production DEBUG=* PORT=10002 node --harmony app",
     "test": "cross-env NODE_ENV=development ./node_modules/mocha/bin/mocha",
-    "dev": "cross-env NODE_ENV=development DEBUG=* PORT=10002 supervisor --harmony app"
+    "dev": "cross-env NODE_ENV=development DEBUG=* PORT=10001 supervisor --harmony app"
   },
   "dependencies": {
     "co-cache": "2.0.1",
@@ -26,9 +26,11 @@
     "validator": "4.4.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "co-mocha": "^1.1.2",
     "co-supertest": "0.0.10",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "mochawesome": "^1.5.4"
   },
   "engines": {
     "node": ">=4"

@@ -269,6 +269,15 @@ describe('/user', function() {
         done();
     });
 
+    it('GET /修改用户获取用户信息', function*(done) {
+        var res = yield agent
+            .get('/user/' + id)
+            .send();
+        var body = res.body;
+        expect(body).to.have.deep.property('data.email', 'maat2@ixiaopu.com');
+        done();
+    });
+
     it('PUT /修改用户信息:用户名少于4个字符', function*(done) {
         var res = yield agent
             .put('/user')

@@ -81,10 +81,9 @@ module.exports = function (router) {
       this.body = outPut.error(`用户${data.name}不存在`);
       return;
     }
-    var newData = Object.assign(userExist, data, {
-      updated_at: Date.now
+    var newData = Object.assign(userExist._doc, data, {
+      updated_at: Date.now()
     });
-    delete newData._id;
     var modifyUser = yield $User.update(id, newData);
     this.session.user = setSession(newData);
     this.body = outPut.success(this.session.user);

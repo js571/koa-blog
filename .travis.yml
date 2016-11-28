@@ -6,4 +6,6 @@ before_script:
 services:
   - mongodb
 notifications:
-  webhooks: https://hooks.pubu.im/services/7eg21xp29941trq
+  webhooks: https://hooks.pubu.im/services/7eg21xp29941trq
+  email:
+    - 464896740@qq.com

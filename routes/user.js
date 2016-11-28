@@ -84,6 +84,7 @@ module.exports = function (router) {
     var newData = Object.assign(userExist, data, {
       updated_at: Date.now
     });
+    delete newData._id;
     var modifyUser = yield $User.update(id, newData);
     this.session.user = setSession(newData);
     this.body = outPut.success(this.session.user);

@@ -259,15 +259,6 @@ describe('/user', function() {
         done();
     });
 
-    it('GET /用户信息：输入非mongoId', function*(done) {
-        var res = yield agent
-            .get('/user/1233')
-            .send();
-        var body = res.body;
-        expect(body).to.have.property('status', 0);
-        done();
-    });
-
     it('PUT /修改用户信息: 正常情况', function*(done) {
         var res = yield agent
             .put('/user')

@@ -5,3 +5,5 @@ before_script:
   - sleep 3
 services:
   - mongodb
+notifications:
+  webhooks: https://hooks.pubu.im/services/7eg21xp29941trq
